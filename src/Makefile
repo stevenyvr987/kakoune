@@ -178,5 +178,13 @@ uninstall:
 		$(mandir)/kak.1.gz \
 		$(mandir)/kak.1
 
+install-xdg:
+	XDG_UTILS_DEBUG_LEVEL=1 xdg-icon-resource install --novendor --size 32 ../contrib/kakoune.png
+	XDG_UTILS_DEBUG_LEVEL=1 xdg-desktop-menu  install --novendor           ../contrib/kakoune.desktop
+
+uninstall-xdg:
+	XDG_UTILS_DEBUG_LEVEL=1 xdg-icon-resource uninstall --size 32 kakoune
+	XDG_UTILS_DEBUG_LEVEL=1 xdg-desktop-menu  uninstall kakoune.desktop
+
 .PHONY: check TAGS clean dist distclean installdirs install install-strip uninstall
 .PHONY: tags test man kak FORCE

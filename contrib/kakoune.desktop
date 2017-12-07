@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Kakoune
+GenericName=Text Editor
+Comment=A code editor heavily inspired by Vim
+Comment[fr]=Un éditeur de code fortement inspiré par Vim
+Categories=Development;Utility;TextEditor;
+
+TryExec=kak
+Exec=kak %F
+Terminal=true
+Icon=kakoune
+StartupNotify=false
+MimeType=text/plain;
